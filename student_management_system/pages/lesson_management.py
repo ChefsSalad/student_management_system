@@ -111,7 +111,7 @@ with open(text_file_path ,'r',encoding='utf-8') as file:
 # from streamlit_chat import message
 #
 # # 读取环境变量中的api_key
-# openai.api_key = "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"
+
 # # 也可直接写api_key
 # #openai.api_key  = 'API_KEY'
 #
