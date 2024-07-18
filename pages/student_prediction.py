@@ -78,7 +78,7 @@ def user_input_features():
         else:
             st.sidebar.write(f'查询到学生信息{user_id}！')
         for col, val in user_data.iloc[0].items():
-            text_content += f"{col}: {val}\n"
+            text_content += f"{col}: {val}/n"
         user_data = user_data.iloc[0]
 
         a1 = st.sidebar.slider('学习课程数', 0, 450, int(user_data['learned Lessons Num']))
@@ -114,7 +114,7 @@ if st.sidebar.button("全体学生数据管控大屏"):
 outputdf = user_input_features()
 
 
-# df = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\final.xlsx')
+# df = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/final.xlsx')
 file_path = r'resources/final.xlsx'
 # df = pd.read_excel(file_path, nrows=8000)
 #
@@ -222,11 +222,11 @@ df3 = pd.read_excel(r'resources/df3.xlsx')
 #
 # st.title('SHAP 值📈')
 
-# image4 = Image.open(r'D:\fraud-detection-main\fraud-detection-main\summary.png')
-#shapdatadf = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\shapdatadf1.xlsx')
-shapdatadf = pd.read_excel(r'resources\shapdatadf1_chinese.xlsx')
-#shapvaluedf = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\shapvaluedf1.xlsx')
-shapvaluedf = pd.read_excel(r'resources\shapvaluedf1_chinese.xlsx')
+# image4 = Image.open(r'D:/fraud-detection-main/fraud-detection-main/summary.png')
+#shapdatadf = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/shapdatadf1.xlsx')
+shapdatadf = pd.read_excel(r'resources/shapdatadf1_chinese.xlsx')
+#shapvaluedf = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/shapvaluedf1.xlsx')
+shapvaluedf = pd.read_excel(r'resources/shapvaluedf1_chinese.xlsx')
 
 placeholder5 = st.empty()
 f2 = placeholder5.container()
@@ -250,9 +250,9 @@ f2 = placeholder5.container()
 #                      labels={'x': '指标数值', 'y': '对应SHAP值'})
 #     st.write(fig)
 
-features = pd.read_excel(r'resources\features.xlsx')
+features = pd.read_excel(r'resources/features.xlsx')
 catmodel = CatBoostClassifier()
-catmodel.load_model(r"resources\CatBoost_model")
+catmodel.load_model(r"resources/CatBoost_model")
 
 # st.title('执行预测	🏫')
 #outputdf = user_input_features1()
@@ -441,7 +441,7 @@ st.write("""
 # import streamlit as st
 
 # 读取 Word 文档内容为字节流
-with open(r'resources\study_report_stu16.docx', 'rb') as f:
+with open(r'resources/study_report_stu16.docx', 'rb') as f:
     word_content = f.read()
 
 # 创建下载按钮

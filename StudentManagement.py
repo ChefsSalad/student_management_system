@@ -52,12 +52,12 @@ feature_mapping = {
 #     output = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
 #     return output
 # understand the dataset
-# df = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\fraud_updated1.xlsx')
-# #D:\download\student_management_system-chinese\resources
-# df_education = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\final.xlsx')
-df = pd.read_excel(r'resources\fraud_updated1.xlsx')
-#D:\download\student_management_system-chinese\resources
-df_education = pd.read_excel(r'resources\final.xlsx')
+# df = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/fraud_updated1.xlsx')
+# #D:/download/student_management_system-chinese/resources
+# df_education = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/final.xlsx')
+df = pd.read_excel(r'resources/fraud_updated1.xlsx')
+#D:/download/student_management_system-chinese/resources
+df_education = pd.read_excel(r'resources/final.xlsx')
 ID=0
 text_content = ""
 
@@ -78,7 +78,7 @@ text_content = ""
 #     if not user_data.empty:
 #         st.sidebar.write(f'查询到学生信息{user_id}！')
 #         for col, val in user_data.iloc[0].items():
-#             text_content += f"{col}: {val}\n"
+#             text_content += f"{col}: {val}/n"
 #         user_data = user_data.iloc[0]
 #
 #         a1 = st.sidebar.slider('学习课程数', 0, 450, int(user_data['learned Lessons Num']))
@@ -114,8 +114,8 @@ if st.sidebar.button("全体学生数据管控大屏"):
 # outputdf = user_input_features()
 
 
-# df = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\final.xlsx')
-file_path = r'resources\final.xlsx'
+# df = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/final.xlsx')
+file_path = r'resources/final.xlsx'
 # df = pd.read_excel(file_path, nrows=8000)
 
 st.title('数据集	🧑‍🎓')
@@ -204,8 +204,8 @@ st.plotly_chart(fig, use_container_width=True)
 # # 使用 map 方法，将 Class 列中的值根据映射进行转换
 # df2['Class'] = df2['Class'].map(class_mapping)
 # df3['Class'] = df3['Class'].map(class_mapping)
-df2 = pd.read_excel(r'resources\df2.xlsx')
-df3 = pd.read_excel(r'resources\df3.xlsx')
+df2 = pd.read_excel(r'resources/df2.xlsx')
+df3 = pd.read_excel(r'resources/df3.xlsx')
 
 with placeholder3.container():
     f2, f3 = st.columns(2)
@@ -222,11 +222,11 @@ with placeholder3.container():
 
 st.title('SHAP 值📈')
 
-# image4 = Image.open(r'D:\fraud-detection-main\fraud-detection-main\summary.png')
-#shapdatadf = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\shapdatadf1.xlsx')
-shapdatadf = pd.read_excel(r'resources\shapdatadf1_chinese.xlsx')
-#shapvaluedf = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\shapvaluedf1.xlsx')
-shapvaluedf = pd.read_excel(r'resources\shapvaluedf1_chinese.xlsx')
+# image4 = Image.open(r'D:/fraud-detection-main/fraud-detection-main/summary.png')
+#shapdatadf = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/shapdatadf1.xlsx')
+shapdatadf = pd.read_excel(r'resources/shapdatadf1_chinese.xlsx')
+#shapvaluedf = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/shapvaluedf1.xlsx')
+shapvaluedf = pd.read_excel(r'resources/shapvaluedf1_chinese.xlsx')
 
 placeholder5 = st.empty()
 f2 = placeholder5.container()
@@ -250,9 +250,9 @@ with f2:
                      labels={'x': '指标数值', 'y': '对应SHAP值'})
     st.write(fig)
 #
-# features = pd.read_excel(r'D:\fraud-detection-main\fraud-detection-main\features.xlsx')
+# features = pd.read_excel(r'D:/fraud-detection-main/fraud-detection-main/features.xlsx')
 # catmodel = CatBoostClassifier()
-# catmodel.load_model(r"D:\fraud-detection-main\fraud-detection-main\CatBoost_model")
+# catmodel.load_model(r"D:/fraud-detection-main/fraud-detection-main/CatBoost_model")
 #
 # st.title('执行预测	🏫')
 # #outputdf = user_input_features1()
@@ -441,7 +441,7 @@ with f2:
 # # import streamlit as st
 #
 # # 读取 Word 文档内容为字节流
-# with open(r'D:\student_management_system\student_management_system\study_report_stu16.docx', 'rb') as f:
+# with open(r'D:/student_management_system/student_management_system/study_report_stu16.docx', 'rb') as f:
 #     word_content = f.read()
 #
 # # 创建下载按钮

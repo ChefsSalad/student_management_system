@@ -18,7 +18,7 @@ file_names = df["Video Name"].tolist()
 
 # Video file paths
 video_file_path1 = "resources/1.mp4"
-video_file_path2= "resources\\1.2搭建Python环境.mp4"
+video_file_path2= "resources//1.2搭建Python环境.mp4"
 st.title("选择课程视频👀")
 # Selectbox to choose the lesson
 selected_course = st.selectbox('Choose a lesson:',file_names)
@@ -149,7 +149,7 @@ with open(text_file_path ,'r',encoding='utf-8') as file:
 #         st.session_state['prompts'].append({"role": "assistant", "content": output})
 #         st.session_state['user'] = ""
 
-#st.image(r"D:\fraud-detection-main\fraud-detection-main\my_source\logo.png")
+#st.image(r"D:/fraud-detection-main/fraud-detection-main/my_source/logo.png")
 # st.title("课堂助手🤖")
 
 # user_input = st.text_input("输入:", key="user")
@@ -194,7 +194,7 @@ with open(text_file_path ,'r',encoding='utf-8') as file:
 
 #
 # answer='因为python语言比较简单。'
-# # text=response+'\n学生回答：'+answer
+# # text=response+'/n学生回答：'+answer
 # # history = [{'role': 'system', 'content': system_prompt}]
 #
 # # response, history = model.chat(tokenizer, text, history=history)
