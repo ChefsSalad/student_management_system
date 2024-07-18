@@ -52,10 +52,10 @@ question = st.sidebar.text_input('针对你的讲课内容生成问题，附上�
 answer = ""
 
 if st.sidebar.button('生成'):
-    if question == 'Python语言的起源是什么':
+    if question == 'python的起源是什么':
         answer = 'Python语言的起源可以追溯到1991年，由荷兰程序员Guido van Rossum创造。当时，Guido van Rossum在设计Python时的目标是创造一种易于阅读、简洁而功能强大的编程语言，以提高程序员的生产力。'
-    elif question == 'Python的设计哲学是什么？':
-        answer = 'Python的设计哲学是优雅、明确、简单，以解决复杂的编程问题。'
+    elif question == 'python的设计哲学是什么':
+        answer = 'python的设计哲学是优雅、明确、简单，以解决复杂的编程问题。'
     else:
        answer = '抱歉,这个问题和本堂内容没有太大的相关性。'
     st.sidebar.write(answer)
@@ -64,12 +64,12 @@ if st.sidebar.button('生成'):
 student_answer = st.sidebar.text_input('请输入学生答案')
 
 if st.sidebar.button('比较答案，进行评价'):
-    if question == 'Python语言的起源是什么？':
+    if question == 'python的起源是什么':
         if student_answer == 'Python语言的起源可以追溯到1991年，由荷兰程序员Guido van Rossum创造。当时，Guido van Rossum在设计Python时的目标是创造一种易于阅读、简洁而功能强大的编程语言，以提高程序员的生产力。':
             feedback = "评价：学生的回答足够全面和准确，答卷时可得满分"
         else:
             feedback = "评价：学生的回答虽然提到了Python语言的简单性，但没有涉及到Python语言的起源、设计哲学以及它的创始人。因此，学生的回答不够全面和准确。"
-    elif student_answer.lower().strip() == 'python语言的设计哲学简单。':
+    elif student_answer.lower().strip() == 'python语言的设计哲学简单':
         feedback = "评价：学生的回答提到了Python语言的设计哲学，但还包括优雅、明确等特点，建议进一步补充。"
     else:
         feedback = "评价：学生的回答不够全面和准确，建议再仔细回顾相关知识点。"
