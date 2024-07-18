@@ -65,10 +65,10 @@ student_answer = st.sidebar.text_input('请输入学生答案')
 
 if st.sidebar.button('比较答案，进行评价'):
     if question == 'python的起源是什么':
-        if student_answer == 'Python语言的起源可以追溯到1991年，由荷兰程序员Guido van Rossum创造。当时，Guido van Rossum在设计Python时的目标是创造一种易于阅读、简洁而功能强大的编程语言，以提高程序员的生产力。':
+        if student_answer == '1991年，由荷兰程序员创造，易于阅读、简洁而功能强大的编程语言':
             feedback = "评价：学生的回答足够全面和准确，答卷时可得满分"
         else:
-            feedback = "评价：学生的回答虽然提到了Python语言的简单性，但没有涉及到Python语言的起源、设计哲学以及它的创始人。因此，学生的回答不够全面和准确。"
+            feedback = "评价：学生的回答虽然提到了Python语言起源的年份，但没有涉及到Python语言的创始原因及它的创始人。因此，学生的回答不够全面和准确。"
     elif student_answer.lower().strip() == 'python语言的设计哲学简单':
         feedback = "评价：学生的回答提到了Python语言的设计哲学，但还包括优雅、明确等特点，建议进一步补充。"
     else:
