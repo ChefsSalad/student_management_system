@@ -373,8 +373,14 @@ st.markdown("""
 """.format(top_features[0], top_features[1], bottom_features[0], bottom_features[1]), unsafe_allow_html=True)
 
 st.markdown('<h4>学习具体评价:</h4>', unsafe_allow_html=True)
-st.write("""
-   根据提供的数据，学生在学习过程中表现出了积极的参与态度，尤其是在笔记记录和讨论参与度方面，这是值得肯定的。然而，从完成的课程数和完成任务数来看，学生在具体的学习任务完成方面似乎存在一定的困难。学生的学习总时长表明有足够的投入时间，但可能需要更有效的学习方法来提高学习效率。
+# 根据 top_features 和 bottom_features 动态生成评价内容
+positive_aspects = f"根据提供的数据，学生在学习过程中表现出了积极的参与态度，尤其是在{top_features[0]}和{top_features[1]}方面，这是值得肯定的。"
+negative_aspects = f"然而，从{bottom_features[0]}和{bottom_features[1]}来看，学生在具体的学习任务完成方面似乎存在一定的困难。学生的学习总时长表明有足够的投入时间，但可能需要更有效的学习方法来提高学习效率。"
+
+st.markdown('<h4>学习具体评价:</h4>', unsafe_allow_html=True)
+st.write(f"""
+   {positive_aspects}
+   {negative_aspects}
    """)
 
 st.markdown('<h4>学习建议:</h4>', unsafe_allow_html=True)
